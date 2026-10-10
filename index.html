@@ -144,8 +144,12 @@ footer { padding: 4px 16px calc(10px + env(safe-area-inset-bottom)); color: var(
 <script>
 "use strict";
 const STORE_KEY = "english-review-progress-v1";
-const DAY = 86400000;
-const GOOD_STEPS = [1, 3, 7, 14, 30, 60];
+const TODAY_KEY = "english-review-today-v1";
+// Intervals keep growing; a card remembered this many times in a row graduates and leaves review.
+const GOOD_STEPS = [1, 3, 7, 14, 30, 60, 120, 240, 365];
+const GRADUATE_AFTER = GOOD_STEPS.length;
+// Missed days must not pile up: anything beyond this waits for tomorrow.
+const DAILY_LIMIT = 50;
 const app = document.getElementById("app");
 const countEl = document.getElementById("count");
 let cards = [];
@@ -167,13 +171,29 @@ function dayStart(offsetDays = 0) {
 }
 function isDue(card) {
   const p = progress[card.id];
-  return !p || p.due <= Date.now();
+  return !p || (!p.graduated && p.due <= Date.now());
 }
 function stepFor(successes) { return GOOD_STEPS[Math.min(successes, GOOD_STEPS.length - 1)]; }
 function dayLabel(days) { return days === 1 ? "明天" : `${days} 天后`; }
+function goodLabel(successes) { return successes + 1 >= GRADUATE_AFTER ? "毕业" : dayLabel(stepFor(successes)); }
 
+function todayKey() { return new Date().toLocaleDateString("en-CA"); }
+function reviewedToday() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(TODAY_KEY));
+    return saved && saved.day === todayKey() ? saved.count : 0;
+  } catch { return 0; }
+}
+function countReview() {
+  try { localStorage.setItem(TODAY_KEY, JSON.stringify({ day: todayKey(), count: reviewedToday() + 1 })); } catch { /* storage unavailable */ }
+}
+
+let waitingForTomorrow = 0;
 function buildQueue() {
-  queue = cards.filter(isDue).sort((a, b) => (progress[a.id]?.due ?? 0) - (progress[b.id]?.due ?? 0));
+  const due = cards.filter(isDue).sort((a, b) => (progress[a.id]?.due ?? 0) - (progress[b.id]?.due ?? 0));
+  const room = Math.max(0, DAILY_LIMIT - reviewedToday());
+  queue = due.slice(0, room);
+  waitingForTomorrow = due.length - queue.length;
 }
 
 function rate(kind) {
@@ -183,6 +203,7 @@ function rate(kind) {
   if (kind === "good") {
     p.due = dayStart(stepFor(p.successes));
     p.successes += 1;
+    if (p.successes >= GRADUATE_AFTER) p.graduated = true;
   } else if (kind === "hard") {
     p.due = dayStart(1);
   } else {
@@ -193,6 +214,7 @@ function rate(kind) {
   p.last = Date.now();
   progress[card.id] = p;
   saveProgress();
+  countReview();
   queue.shift();
   if (kind === "again") queue.push(card);
   revealed = false;
@@ -299,7 +321,7 @@ function render() {
   app.append(el("div", { class: "actions rate" }, [
     choice("again", "忘了", "今天再来", "again"),
     choice("hard", "模糊", "明天", "hard"),
-    choice("good", "记得", dayLabel(stepFor(p.successes)), "good"),
+    choice("good", "记得", goodLabel(p.successes), "good"),
   ]));
 }
 
@@ -307,13 +329,20 @@ function doneView() {
   if (!cards.length) {
     return el("div", { class: "message" }, [el("h2", { text: "还没有卡片" }), el("p", { text: "上完课挑好说法，就会出现在这里。" })]);
   }
-  const upcoming = cards.map(c => progress[c.id]?.due).filter(Boolean).sort((a, b) => a - b);
+  const active = cards.filter(c => !progress[c.id]?.graduated);
+  const graduated = cards.length - active.length;
+  const upcoming = active.map(c => progress[c.id]?.due).filter(Boolean).sort((a, b) => a - b);
   const tomorrowEnd = dayStart(2);
   const tomorrow = upcoming.filter(due => due < tomorrowEnd).length;
   const next = upcoming[0];
-  const nextText = tomorrow ? `明天有 ${tomorrow} 张要复习。`
+  const nextText = waitingForTomorrow ? `今天的量够了，剩下 ${waitingForTomorrow} 张明天再复习。`
+    : tomorrow ? `明天有 ${tomorrow} 张要复习。`
     : next ? `下一次复习：${new Date(next).toLocaleDateString("zh-CN", { month: "long", day: "numeric" })}。` : "";
-  return el("div", { class: "message" }, [el("h2", { text: "今天的复习完成了" }), nextText ? el("p", { text: nextText }) : null]);
+  return el("div", { class: "message" }, [
+    el("h2", { text: "今天的复习完成了" }),
+    nextText ? el("p", { text: nextText }) : null,
+    graduated ? el("p", { text: `已经记牢毕业 ${graduated} 张。` }) : null,
+  ]);
 }
 
 document.addEventListener("keydown", event => {

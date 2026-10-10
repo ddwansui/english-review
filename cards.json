@@ -43,5 +43,32 @@
     "source": "ESLPod 309",
     "added": "2026-10-10",
     "audio": "audio/eslpod309-get-going.m4a"
+  },
+  {
+    "id": "sp17-no-time-hiking",
+    "zh": "抱歉，我这周六要出去旅行，所以没时间去爬山。",
+    "en": "Sorry, I'm going on a trip this Saturday, so I don't have time to go hiking.",
+    "note": "go on a trip：去旅行；don't have time to + 动词原形；爬山说 go hiking",
+    "source": "口语 SP17",
+    "added": "2026-10-10",
+    "audio": "audio/sp17-no-time-hiking.m4a"
+  },
+  {
+    "id": "sp17-doctors-appointment",
+    "zh": "我约了医生。其实我有点头疼。",
+    "en": "I have a doctor's appointment. Actually, I have a bit of a headache.",
+    "note": "a doctor's appointment：约了看医生（别漏 a）；头疼说 have a headache，不说 my brain is pain",
+    "source": "口语 SP17",
+    "added": "2026-10-10",
+    "audio": "audio/sp17-doctors-appointment.m4a"
+  },
+  {
+    "id": "sp17-go-next-saturday",
+    "zh": "要不我们下周六去爬山？我很想跟你一起去。",
+    "en": "Maybe we can go hiking next Saturday? I'd love to go with you.",
+    "note": "can 后面用原形：can go；I'd love to…：我很想……，婉拒后提出别的时间",
+    "source": "口语 SP17",
+    "added": "2026-10-10",
+    "audio": "audio/sp17-go-next-saturday.m4a"
   }
 ]

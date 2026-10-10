@@ -4,3 +4,14 @@
 
 - 卡片在 `cards.json`，每课由老师（Claude）挑好后加入。
 - 复习进度只存在各自设备的浏览器里。
+
+## 发音
+
+每张卡的 `audio` 是用 Kokoro（af_heart 声音）离线生成的录音，网页优先播放它，没有时才用设备自带语音。
+
+生成方法（在装有 KokoroTTS.app 和 mLearn 的 Mac 上，完全离线）：
+
+1. `tools/convert.py tools/kokoro-v1_0.pth`：把 KokoroTTS.app 自带的模型转换成 Python 可用的格式（只需一次，文件不入库）。
+2. `tools/speak.py audio af_heart "<id>=<英文句子>" ...`：生成 `audio/<id>.m4a`。
+
+两个脚本都用 mLearn 的 Python 环境运行：`~/Library/Application Support/mlearn/env/bin/python`，并设置 `HF_HUB_OFFLINE=1`。

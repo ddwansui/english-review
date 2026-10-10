@@ -203,7 +203,28 @@ function reveal() {
   if (!queue[0] || revealed) return;
   revealed = true;
   render();
-  speak(queue[0].en);
+  playCard(queue[0]);
+}
+
+// Recorded natural voice when the card has it; the device voice is only a fallback.
+const audioCache = new Map();
+function audioFor(card) {
+  if (!card.audio) return null;
+  let audio = audioCache.get(card.id);
+  if (!audio) {
+    audio = new Audio(card.audio);
+    audio.preload = "auto";
+    audioCache.set(card.id, audio);
+  }
+  return audio;
+}
+function playCard(card) {
+  const audio = audioFor(card);
+  if (!audio) { speak(card.en); return; }
+  if ("speechSynthesis" in window) speechSynthesis.cancel();
+  for (const other of audioCache.values()) if (other !== audio) other.pause();
+  audio.currentTime = 0;
+  audio.play().catch(() => speak(card.en));
 }
 
 let voice = null;
@@ -211,7 +232,8 @@ function pickVoice() {
   if (!("speechSynthesis" in window)) return;
   const voices = speechSynthesis.getVoices();
   const english = voices.filter(v => /^en(-|_)US/i.test(v.lang));
-  voice = english.find(v => /Samantha|Ava|Allison|Alex/.test(v.name)) || english[0]
+  voice = english.find(v => /Premium|Enhanced/i.test(v.name))
+    || english.find(v => /Samantha|Ava|Allison|Alex/.test(v.name)) || english[0]
     || voices.find(v => /^en/i.test(v.lang)) || null;
 }
 if ("speechSynthesis" in window) {
@@ -255,11 +277,12 @@ function render() {
   const answer = el("div", { class: "answer" }, [
     el("div", { class: "en-row" }, [
       el("p", { class: "en", lang: "en", text: card.en }),
-      el("button", { class: "speak", type: "button", "aria-label": "朗读", onclick: () => speak(card.en) }, speakerIcon()),
+      el("button", { class: "speak", type: "button", "aria-label": "朗读", onclick: () => playCard(card) }, speakerIcon()),
     ]),
     card.note ? el("p", { class: "note", text: card.note }) : null,
   ]);
   answer.hidden = !revealed;
+  audioFor(card);
   app.append(el("article", { class: "card" }, [
     card.source ? el("p", { class: "source", text: card.source }) : null,
     el("p", { class: "prompt", text: card.zh }),

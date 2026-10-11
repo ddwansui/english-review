@@ -1,74 +1,101 @@
 [
-  {
-    "id": "eslpod309-keep-an-eye-out",
-    "zh": "我会留意找的。",
-    "en": "I'll keep an eye out for it.",
-    "note": "keep an eye out for + 东西：一边走一边留意找",
-    "source": "ESLPod 309",
-    "added": "2026-10-10",
-    "audio": "audio/eslpod309-keep-an-eye-out.m4a"
-  },
-  {
-    "id": "eslpod309-no-more-than",
-    "zh": "走过去最多三分钟。",
-    "en": "It's no more than a three-minute walk.",
-    "note": "no more than：最多、不超过；a three-minute walk：步行三分钟的路程",
-    "source": "ESLPod 309",
-    "added": "2026-10-10",
-    "audio": "audio/eslpod309-no-more-than.m4a"
-  },
-  {
-    "id": "eslpod309-give-or-take",
-    "zh": "走过去应该五分钟左右。",
-    "en": "You should be able to walk there in five minutes, give or take.",
-    "note": "give or take：放在数字后面，表示「左右」",
-    "source": "ESLPod 309",
-    "added": "2026-10-10",
-    "audio": "audio/eslpod309-give-or-take.m4a"
-  },
-  {
-    "id": "eslpod309-all-set",
-    "zh": "我都清楚了，不用再说了。",
-    "en": "I think I'm all set.",
-    "note": "I'm all set：我都好了，不需要别的了；也可以回答店员「还要什么吗」",
-    "source": "ESLPod 309",
-    "added": "2026-10-10",
-    "audio": "audio/eslpod309-all-set.m4a"
-  },
-  {
-    "id": "eslpod309-get-going",
-    "zh": "谢谢，不过我真得走了。",
-    "en": "Thanks, but I've really got to get going.",
-    "note": "I've got to = I have to；get going：动身、出发",
-    "source": "ESLPod 309",
-    "added": "2026-10-10",
-    "audio": "audio/eslpod309-get-going.m4a"
-  },
-  {
-    "id": "sp17-no-time-hiking",
-    "zh": "抱歉，我这周六要出去旅行，所以没时间去爬山。",
-    "en": "Sorry, I'm going on a trip this Saturday, so I don't have time to go hiking.",
-    "note": "go on a trip：去旅行；don't have time to + 动词原形；爬山说 go hiking",
-    "source": "口语 SP17",
-    "added": "2026-10-10",
-    "audio": "audio/sp17-no-time-hiking.m4a"
-  },
-  {
-    "id": "sp17-doctors-appointment",
-    "zh": "我约了医生。其实我有点头疼。",
-    "en": "I have a doctor's appointment. Actually, I have a bit of a headache.",
-    "note": "a doctor's appointment：约了看医生（别漏 a）；头疼说 have a headache，不说 my brain is pain",
-    "source": "口语 SP17",
-    "added": "2026-10-10",
-    "audio": "audio/sp17-doctors-appointment.m4a"
-  },
-  {
-    "id": "sp17-go-next-saturday",
-    "zh": "要不我们下周六去爬山？我很想跟你一起去。",
-    "en": "Maybe we can go hiking next Saturday? I'd love to go with you.",
-    "note": "can 后面用原形：can go；I'd love to…：我很想……，婉拒后提出别的时间",
-    "source": "口语 SP17",
-    "added": "2026-10-10",
-    "audio": "audio/sp17-go-next-saturday.m4a"
-  }
+ {
+  "id": "eslpod309-keep-an-eye-out",
+  "zh": "我会留意找的。",
+  "en": "I'll keep an eye out for it.",
+  "note": "keep an eye out for + 东西：一边走一边留意找",
+  "source": "ESLPod 309",
+  "added": "2026-10-10",
+  "audio": "audio/eslpod309-keep-an-eye-out.m4a"
+ },
+ {
+  "id": "eslpod309-no-more-than",
+  "zh": "走过去最多三分钟。",
+  "en": "It's no more than a three-minute walk.",
+  "note": "no more than：最多、不超过；a three-minute walk：步行三分钟的路程",
+  "source": "ESLPod 309",
+  "added": "2026-10-10",
+  "audio": "audio/eslpod309-no-more-than.m4a"
+ },
+ {
+  "id": "eslpod309-give-or-take",
+  "zh": "走过去应该五分钟左右。",
+  "en": "You should be able to walk there in five minutes, give or take.",
+  "note": "give or take：放在数字后面，表示「左右」",
+  "source": "ESLPod 309",
+  "added": "2026-10-10",
+  "audio": "audio/eslpod309-give-or-take.m4a"
+ },
+ {
+  "id": "eslpod309-all-set",
+  "zh": "我都清楚了，不用再说了。",
+  "en": "I think I'm all set.",
+  "note": "I'm all set：我都好了，不需要别的了；也可以回答店员「还要什么吗」",
+  "source": "ESLPod 309",
+  "added": "2026-10-10",
+  "audio": "audio/eslpod309-all-set.m4a"
+ },
+ {
+  "id": "eslpod309-get-going",
+  "zh": "谢谢，不过我真得走了。",
+  "en": "Thanks, but I've really got to get going.",
+  "note": "I've got to = I have to；get going：动身、出发",
+  "source": "ESLPod 309",
+  "added": "2026-10-10",
+  "audio": "audio/eslpod309-get-going.m4a"
+ },
+ {
+  "id": "sp17-no-time-hiking",
+  "zh": "抱歉，我这周六要出去旅行，所以没时间去爬山。",
+  "en": "Sorry, I'm going on a trip this Saturday, so I don't have time to go hiking.",
+  "note": "go on a trip：去旅行；don't have time to + 动词原形；爬山说 go hiking",
+  "source": "口语 SP17",
+  "added": "2026-10-10",
+  "audio": "audio/sp17-no-time-hiking.m4a"
+ },
+ {
+  "id": "sp17-doctors-appointment",
+  "zh": "我约了医生。其实我有点头疼。",
+  "en": "I have a doctor's appointment. Actually, I have a bit of a headache.",
+  "note": "a doctor's appointment：约了看医生（别漏 a）；头疼说 have a headache，不说 my brain is pain",
+  "source": "口语 SP17",
+  "added": "2026-10-10",
+  "audio": "audio/sp17-doctors-appointment.m4a"
+ },
+ {
+  "id": "sp17-go-next-saturday",
+  "zh": "要不我们下周六去爬山？我很想跟你一起去。",
+  "en": "Maybe we can go hiking next Saturday? I'd love to go with you.",
+  "note": "can 后面用原形：can go；I'd love to…：我很想……，婉拒后提出别的时间",
+  "source": "口语 SP17",
+  "added": "2026-10-10",
+  "audio": "audio/sp17-go-next-saturday.m4a"
+ },
+ {
+  "id": "eslpod310-do-the-trick",
+  "zh": "结婚以后，把我们俩公寓的东西搬过来，应该就够了。",
+  "en": "After we're married, we'll just take the things from each of our two apartments and that should do the trick.",
+  "note": "do the trick：管用、能解决问题；That should do the trick. 这样应该就行了",
+  "source": "ESLPod 310",
+  "added": "2026-10-11",
+  "audio": "audio/eslpod310-do-the-trick.m4a"
+ },
+ {
+  "id": "eslpod310-that-leaves",
+  "zh": "那就只剩客厅了。",
+  "en": "That just leaves the living room.",
+  "note": "leave 这里是“剩下”：That leaves…… 那就剩……了，可换词：That just leaves one question.",
+  "source": "ESLPod 310",
+  "added": "2026-10-11",
+  "audio": "audio/eslpod310-that-leaves.m4a"
+ },
+ {
+  "id": "eslpod310-in-time-for",
+  "zh": "我本来只是想赶回家看下午的比赛。",
+  "en": "I was just hoping to get home in time for the game this afternoon.",
+  "note": "I was just hoping…：我本来只是想……（委婉抱怨）；in time for：及时赶上某事（≠ on time 准时）",
+  "source": "ESLPod 310",
+  "added": "2026-10-11",
+  "audio": "audio/eslpod310-in-time-for.m4a"
+ }
 ]

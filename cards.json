@@ -97,5 +97,50 @@
     "source": "ESLPod 310",
     "added": "2026-10-11",
     "audio": "audio/eslpod310-in-time-for.m4a"
+  },
+  {
+    "id": "eslpod311-passed-over",
+    "zh": "几个月前他在公司没被提拔。",
+    "en": "He was passed over for a promotion at work a couple of months ago.",
+    "note": "be passed over for a promotion：升职时被跳过，别人升了他没升（不是他自己放弃）；a couple of months：几个月",
+    "source": "ESLPod 311",
+    "added": "2026-10-12",
+    "audio": "audio/eslpod311-passed-over.m4a"
+  },
+  {
+    "id": "eslpod311-that-would-do-it",
+    "zh": "（听完对方讲的原因）难怪会这样。",
+    "en": "That would do it.",
+    "note": "That would do it：那就说得通了、难怪；对别人讲的原因表示理解，不是“那会做它”",
+    "source": "ESLPod 311",
+    "added": "2026-10-12",
+    "audio": "audio/eslpod311-that-would-do-it.m4a"
+  },
+  {
+    "id": "eslpod311-fed-up",
+    "zh": "我对什么都烦透了。",
+    "en": "I'm fed up with everything.",
+    "note": "be fed up with…：受够了、烦透了；可换词：I'm fed up with my job.",
+    "source": "ESLPod 311",
+    "added": "2026-10-12",
+    "audio": "audio/eslpod311-fed-up.m4a"
+  },
+  {
+    "id": "eslpod311-beat-around-the-bush",
+    "zh": "别绕弯子了，直接告诉我。",
+    "en": "Don't beat around the bush. Just tell me.",
+    "note": "beat around the bush：说话绕圈子、不说重点；催对方说重点时整句可用",
+    "source": "ESLPod 311",
+    "added": "2026-10-12",
+    "audio": "audio/eslpod311-beat-around-the-bush.m4a"
+  },
+  {
+    "id": "eslpod311-you-never-know",
+    "zh": "我原来也这么想，可谁说得准呢。",
+    "en": "I thought so, too, but you never know.",
+    "note": "you never know：世事难料、说不准；表达不确定，不是“你永远不知道”",
+    "source": "ESLPod 311",
+    "added": "2026-10-12",
+    "audio": "audio/eslpod311-you-never-know.m4a"
   }
 ]

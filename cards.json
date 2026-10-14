@@ -142,5 +142,50 @@
     "source": "ESLPod 311",
     "added": "2026-10-12",
     "audio": "audio/eslpod311-you-never-know.m4a"
+  },
+  {
+    "id": "eslpod313-shoot-the-breeze",
+    "zh": "他搬进来的时候，我想跟他闲聊几句。",
+    "en": "I tried to shoot the breeze with him.",
+    "note": "shoot the breeze：闲聊、随便聊聊；平时聊天就能用",
+    "source": "ESLPod 313",
+    "added": "2026-10-14",
+    "audio": "audio/eslpod313-shoot-the-breeze.m4a"
+  },
+  {
+    "id": "eslpod313-line-of-work",
+    "zh": "你是做哪一行的？",
+    "en": "What line of work are you in?",
+    "note": "line of work：职业、行当；比 What's your job? 更自然",
+    "source": "ESLPod 313",
+    "added": "2026-10-14",
+    "audio": "audio/eslpod313-line-of-work.m4a"
+  },
+  {
+    "id": "eslpod313-put-it-past",
+    "zh": "（说他可能干坏事）我看他还真干得出来。",
+    "en": "I wouldn't put it past him.",
+    "note": "I wouldn't put it past sb：某人真做得出这种事（多指坏事）",
+    "source": "ESLPod 313",
+    "added": "2026-10-14",
+    "audio": "audio/eslpod313-put-it-past.m4a"
+  },
+  {
+    "id": "eslpod313-mind-our-own-business",
+    "zh": "我觉得我们还是少管闲事吧。",
+    "en": "I think we should just mind our own business.",
+    "note": "mind one's own business：管好自己的事，别多管闲事",
+    "source": "ESLPod 313",
+    "added": "2026-10-14",
+    "audio": "audio/eslpod313-mind-our-own-business.m4a"
+  },
+  {
+    "id": "eslpod313-no-for-an-answer",
+    "zh": "（坚持邀请或要求）我可不接受拒绝。",
+    "en": "I'm not taking no for an answer.",
+    "note": "not take no for an answer：不接受别人说“不”，非要做到不可",
+    "source": "ESLPod 313",
+    "added": "2026-10-14",
+    "audio": "audio/eslpod313-no-for-an-answer.m4a"
   }
 ]

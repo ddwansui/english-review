@@ -187,5 +187,77 @@
     "source": "ESLPod 313",
     "added": "2026-10-14",
     "audio": "audio/eslpod313-no-for-an-answer.m4a"
+  },
+  {
+    "id": "eslpod312-slacking-off",
+    "zh": "老板从来不用担心我偷懒。",
+    "en": "The boss never had to worry about me slacking off.",
+    "note": "slack off：偷懒、松懈；worry about sb doing：担心某人做某事",
+    "source": "ESLPod 312",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod312-slacking-off.m4a"
+  },
+  {
+    "id": "eslpod312-to-my-surprise",
+    "zh": "没想到，我还挺喜欢团队合作的。",
+    "en": "To my surprise, I liked working in a team.",
+    "note": "to my surprise：让我意外的是，放在句首讲出乎意料的事",
+    "source": "ESLPod 312",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod312-to-my-surprise.m4a"
+  },
+  {
+    "id": "eslpod312-fall-through-the-cracks",
+    "zh": "我从不用担心有事情被漏掉。",
+    "en": "I never need to worry that things will fall through the cracks.",
+    "note": "fall through the cracks：被疏忽、被漏掉（不是真的掉进缝里）",
+    "source": "ESLPod 312",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod312-fall-through-the-cracks.m4a"
+  },
+  {
+    "id": "eslpod312-take-charge",
+    "zh": "我们知道什么时候该主导，什么时候该退一步。",
+    "en": "We know when to take charge and when to back off.",
+    "note": "take charge：负责、主导；back off：退让、不插手",
+    "source": "ESLPod 312",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod312-take-charge.m4a"
+  },
+  {
+    "id": "eslpod314-where-to-begin",
+    "zh": "（面对一大堆选择）哇，我真不知道从哪儿开始。",
+    "en": "Wow, I really don't know where to begin.",
+    "note": "where to begin：从哪里开始；面对很多选择或很多事情时都能用",
+    "source": "ESLPod 314",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod314-where-to-begin.m4a"
+  },
+  {
+    "id": "eslpod314-watch-out-for",
+    "zh": "有一点要注意：有些音乐网站是专属格式的。",
+    "en": "One thing you have to watch out for is that some music websites are proprietary.",
+    "note": "One thing you have to watch out for is…：有一点要注意的是……；watch out for：留意、提防",
+    "source": "ESLPod 314",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod314-watch-out-for.m4a"
+  },
+  {
+    "id": "eslpod314-worried-about",
+    "zh": "这正是我担心的。",
+    "en": "That's what I'm worried about.",
+    "note": "That's what I'm worried about：这正是我担心的，回应别人时很自然",
+    "source": "ESLPod 314",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod314-worried-about.m4a"
+  },
+  {
+    "id": "eslpod314-take-it",
+    "zh": "这正是我一直在找的。我买了。",
+    "en": "It looks like what I've been looking for. I'll take it.",
+    "note": "what I've been looking for：我一直在找的东西；I'll take it：买东西时说“就要这个了”",
+    "source": "ESLPod 314",
+    "added": "2026-10-15",
+    "audio": "audio/eslpod314-take-it.m4a"
   }
 ]
